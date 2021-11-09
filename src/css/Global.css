@@ -1,0 +1,124 @@
+/*
+// RESET
+*/
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  
+  /*
+  // CSS VARS
+  */
+  :root {
+    --lighter-gray : #F3F6F9;
+    --gray : #515863;
+    --dark-gray : #3D424A;
+    --darker-gray : #1E2125;
+  
+    --accent-color: #5C5EDC;
+  }
+
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    color: var(--dark-gray);
+    padding-top: 0;
+    font-size: 1rem;
+    background-color: var(--lighter-gray);
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+
+
+  /* STRUCTURE */
+  .container {
+    max-width: 1199px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pageHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .pageHeader h1{
+    margin: 0.5rem;
+  }
+  .pageHeader h1 span{
+    opacity: 0.5;
+  }
+  .pageActions {
+    display: flex;
+  }
+  .pageActions .btn.btn-accent {
+    flex-shrink: 0;
+  }
+  .pageActions select + .btn.btn-accent {
+    margin-left: 0.5rem;
+  }
+  .pageFooter {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .pageBody {
+    width: 100%;
+  }
+  .pageBodyContent {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom:  1.5rem;
+  }
+  .pageBodyImage {
+    
+  }
+  .pageBodyImage img{
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    border-radius: 3px;
+  }
+
+  .row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+/* UI */
+.animRight {
+    transform: translateX(82px);
+    opacity: 0;
+    animation: animRight 0.3s forwards;
+}
+  
+@keyframes animRight {
+    to {
+      transform: initial;
+      opacity: initial;
+    }
+}
